@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganga Aarti Wale — Sacred Ceremonies Reimagined</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis"></script>
+    
+
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Floating Religious Elements -->
+    <!-- <div class="floating-elements">
+        <div class="floating-icon" style="left: 10%; top: 20%; animation-delay: 0s;">🪔</div>
+        <div class="floating-icon" style="left: 80%; top: 30%; animation-delay: 2s;">🕉</div>
+        <div class="floating-icon" style="left: 15%; top: 60%; animation-delay: 4s;">🙏</div>
+        <div class="floating-icon" style="left: 70%; top: 70%; animation-delay: 6s;">🌺</div>
+        <div class="floating-icon" style="left: 40%; top: 80%; animation-delay: 8s;">💐</div>
+        <div class="floating-icon" style="left: 85%; top: 50%; animation-delay: 10s;">🔱</div>
+    </div> -->
+
+    <!-- 🌺 Top Info Bar -->
+    <div class="top-bar">
+    <div class="top-bar-content">
+        <div class="top-bar-left">
+        <span><i class="fa-solid fa-phone"></i> <a href="tel:+917999223157">+91 79992 23157</a></span>
+        </div>
+        <div class="top-bar-right">
+        <a href="https://www.instagram.com/ganga_aarti_wale?igsh=bjl2M3R5YTZic2t2" target="_blank" class="top-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@ganga_aarti_wale" target="_blank" class="top-icon"><i class="fa-brands fa-youtube"></i></a>
+        <a href="http://tinyurl.com/3wha6ebd" target="_blank" class="top-icon"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:gangaaartiwale@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🕉 Ganga Aarti Wale</div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 💬 WhatsApp CTA -->
+    <a 
+    href="https://wa.me/917999223157?text=Namaste%20%2C%20I%20want%20to%20inquire%20about%20Ganga%20Maha%20Aarti%20ceremonies." 
+    class="whatsapp-cta" 
+    target="_blank" 
+    aria-label="Chat on WhatsApp"
+    >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <span>Chat with us</span>
+    </a>
+
+    <!-- ⬆️ Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Scroll to top">
+    ↑
+    </button>
+
+
+
+    <!-- Hero Section with Horizontal Scroll -->
+    <section class="hero" id="home">
+        <div class="hero-scroll-container" id="heroScroll">
+            <!-- Panel 1 -->
+            <div class="hero-panel panel-1">
+                <div class="hero-panel-bg"></div>
+                <canvas id="diyaParticles"></canvas>
+                <div class="hero-content">
+                    <h1 class="hero-title">SACRED<br>CEREMONIES</h1>
+                    
+                    <p class="hero-subtitle">गंगा तरंग रमणीय जटा कलापं</p>
+                    <p class="hero-description">Experience the divine essence of Varanasi's ancient traditions</p>
+                </div>
+            </div>
+
+            <!-- Panel 2 -->
+            <div class="hero-panel panel-2">
+                <div class="hero-panel-bg"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">DIVINE<br>BLESSINGS</h1>
+                    <p class="hero-subtitle" data-shadow="शुभ अवसर पर गंगा आरती">गौरी निरंतर विभूषित वाम भागं |</p>
+                    <p class="hero-description">Authentic rituals performed by experienced pandits from Varanasi</p>
+                </div>
+            </div>
+
+            <!-- Panel 3 -->
+            <div class="hero-panel panel-3">
+                <div class="hero-panel-bg"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">SPIRITUAL<br>GRACE</h1>
+                    <p class="hero-subtitle">नारायण प्रियमनंग मदापहारं</p>
+                    <p class="hero-description">Purifying the mind, body, and soul through sacred traditions</p>
+                </div>
+            </div>
+
+            <!-- Panel 4 -->
+            <div class="hero-panel panel-4">
+                <div class="hero-panel-bg"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">AUSPICIOUS<br>MOMENTS</h1>
+                    <p class="hero-subtitle">वाराणसी पुरपतिं भज विश्वनाथम् ||</p>
+                    <p class="hero-description">Making your special occasions truly unforgettable</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">DRAG TO EXPLORE</div>
+        <div class="scroll-progress">
+            <div class="progress-dot active" data-panel="0"></div>
+            <div class="progress-dot" data-panel="1"></div>
+            <div class="progress-dot" data-panel="2"></div>
+            <div class="progress-dot" data-panel="3"></div>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <div class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-item">🪔 AUTHENTIC RITUALS</div>
+            <div class="marquee-item">🕉 DIVINE BLESSINGS</div>
+            <div class="marquee-item">🙏 SPIRITUAL GRACE</div>
+            <div class="marquee-item">🪔 AUTHENTIC RITUALS</div>
+            <div class="marquee-item">🕉 DIVINE BLESSINGS</div>
+            <div class="marquee-item">🙏 SPIRITUAL GRACE</div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-visual">
+            <div class="about-visual-content">🕉</div>
+        </div>
+        <div class="about-content">
+            <div class="section-number">[ 01 — HERITAGE ]</div>
+            <h2 class="about-title">The Sacred Significance</h2>
+            <p class="about-text">
+                Ganga Aarti Wale is dedicated to bringing the spiritual experience of Varanasi’s Ganga Aarti to your home, wedding, or religious event. With a team of experienced priests and a commitment to tradition, we ensure each aarti is performed with devotion, purity, and authenticity.
+            </p>
+            <p class="about-text">
+                Located in Varanasi, Uttar Pradesh, we serve families, wedding planners, and devotees who wish to celebrate the divine essence of Ganga in their special moments.
+            </p>
+            <!-- <p class="about-text">
+                Performing this sacred ceremony at weddings or cultural events is considered profoundly auspicious, 
+                ensuring smooth completion and divine blessings for all new beginnings.
+            </p> -->
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Ceremonies</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Devotion</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="services-header">
+            <div class="section-number">[ 02 — OFFERINGS ]</div>
+            <h2 class="services-title">SACRED<br>SERVICES</h2>
+        </div>
+        <div class="services-grid-new">
+            <!-- Service 1 -->
+            <div class="service-card-new">
+                <div class="service-image-wrapper">
+                    <img src="https://www.itchyboots.com/files/blogs/through-the-heart-of-uttar-pradesh-to-experience-a-ganga-aarti/through-the-heart-of-uttar-pradesh-to-experience-a-ganga-aarti-3.jpg" alt="Ganga Aarti at Home" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g1%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%23FF9933%22/%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%23A52A2A%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill=%22url(%23g1)%22 width=%22800%22 height=%22600%22/%3E%3Ccircle cx=%22400%22 cy=%22300%22 r=%22150%22 fill=%22white%22 opacity=%220.2%22/%3E%3Ctext x=%22400%22 y=%22350%22 font-size=%22180%22 text-anchor=%22middle%22 fill=%22white%22 opacity=%220.8%22%3E🪔%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="service-content">
+                    <div class="service-number-new">[ 01 — HOME SERVICE ]</div>
+                    <h3 class="service-title-new">Ganga Aarti at Home / Event / Stage</h3>
+                    <p class="service-description-new">
+                        Bring the sacred tradition of Ganga Aarti to your home, event venue, or stage with complete authenticity and devotion.
+                    </p>
+                    <ul class="service-features">
+                        <li>Traditional aarti with all rituals</li>
+                        <li>Performed by experienced priests</li>
+                        <li>Materials and lamps included</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card-new">
+                <div class="service-image-wrapper">
+                    <img src="https://gangaaartiweddingevent.com/admin/images/4ec3aba4d589c27a36c83845f4396ac81718893828.jpg" alt="Wedding Aarti" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g2%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%23A52A2A%22/%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%238B0000%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill=%22url(%23g2)%22 width=%22800%22 height=%22600%22/%3E%3Ccircle cx=%22400%22 cy=%22300%22 r=%22150%22 fill=%22white%22 opacity=%220.2%22/%3E%3Ctext x=%22400%22 y=%22350%22 font-size=%22180%22 text-anchor=%22middle%22 fill=%22white%22 opacity=%220.8%22%3E💒%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="service-content">
+                    <div class="service-number-new">[ 02 — WEDDING SERVICE ]</div>
+                    <h3 class="service-title-new">Wedding / Shaadi Aarti</h3>
+                    <p class="service-description-new">
+                        Elevate your wedding ceremony with devotional Ganga Aarti, blessing your union with divine grace and prosperity.
+                    </p>
+                    <ul class="service-features">
+                        <li>Devotional aarti for wedding ceremonies</li>
+                        <li>Custom arrangements as per event</li>
+                        <li>Includes priests, lamps, and pooja materials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card-new">
+                <div class="service-image-wrapper">
+                    <img src="https://media.easy-peasy.ai/27feb2bb-aeb4-4a83-9fb6-8f3f2a15885e/052bff67-6534-4cf3-94a3-628e2985fcdc.png" alt="Pooja Aarti" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g3%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%23FF9933%22/%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%23FFD700%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill=%22url(%23g3)%22 width=%22800%22 height=%22600%22/%3E%3Ccircle cx=%22400%22 cy=%22300%22 r=%22150%22 fill=%22white%22 opacity=%220.2%22/%3E%3Ctext x=%22400%22 y=%22350%22 font-size=%22180%22 text-anchor=%22middle%22 fill=%22white%22 opacity=%220.8%22%3E🕉%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="service-content">
+                    <div class="service-number-new">[ 03 — POOJA SERVICE ]</div>
+                    <h3 class="service-title-new">Pooja / Anustan / Katha Aarti</h3>
+                    <p class="service-description-new">
+                        Complete pooja setup with all traditional rituals, perfect for festivals, kathas, and religious gatherings.
+                    </p>
+                    <ul class="service-features">
+                        <li>Complete pooja setup at your venue</li>
+                        <li>Includes all necessary rituals and items</li>
+                        <li>Perfect for festivals and religious gatherings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-number" style="text-align: center;">[ 03 — DIVINE MOMENTS ]</div>
+        <h2 class="gallery-title">SACRED<br>MOMENTS</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="IMGs/img_1.jpg" alt="Ceremony" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 800%22%3E%3Crect fill=%22%23A52A2A%22 width=%22800%22 height=%22800%22/%3E%3Ctext x=%22400%22 y=%22420%22 font-size=%22200%22 text-anchor=%22middle%22%3E🪔%3C/text%3E%3C/svg%3E'">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-icon">🪔</div>
+                    <div class="gallery-overlay-text">Wedding Blessing</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://pixahive.com/wp-content/uploads/2020/10/Ganga-Aarti-at-Dashashwamedh-Ghat-156004-pixahive.jpg" alt="Ritual" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23FF9933%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22230%22 font-size=%22100%22 text-anchor=%22middle%22%3E🕉%3C/text%3E%3C/svg%3E'">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-icon">🕉</div>
+                    <div class="gallery-overlay-text">Sacred Ritual</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Ganga_Aarti_at_Dashwamedh_Gaht.jpg" alt="Evening" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%238B0000%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22230%22 font-size=%22100%22 text-anchor=%22middle%22%3E🙏%3C/text%3E%3C/svg%3E'">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-icon">🙏</div>
+                    <div class="gallery-overlay-text">Evening Aarti</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://gangaaartievent.com/img/about1.jpg" alt="Celebration" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23A52A2A%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22230%22 font-size=%22100%22 text-anchor=%22middle%22%3E🌺%3C/text%3E%3C/svg%3E'">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-icon">🌺</div>
+                    <div class="gallery-overlay-text">Cultural Event</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://gangaaartievent.com/img/service-1.jpg" alt="Offerings" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22%3E%3Crect fill=%22%23FF9933%22 width=%22800%22 height=%22400%22/%3E%3Ctext x=%22400%22 y=%22250%22 font-size=%22150%22 text-anchor=%22middle%22%3E💐%3C/text%3E%3C/svg%3E'">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-icon">💐</div>
+                    <div class="gallery-overlay-text">Sacred Offerings</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+      
+                <img src="https://wittmann-tours.de/wp-content/uploads/2020/04/CW-20181112-153617-3332.jpg" alt="Divine" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23A52A2A%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22230%22 font-size=%22100%22 text-anchor=%22middle%22%3E✨%3C/text%3E%3C/svg%3E'">
+                <div class="gallery-overlay">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-icon">🔱</div>
+                    <div class="gallery-overlay-text">Traditional Setup</div>
+                </div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://gangaaartievent.com/img/gallary/gallary-7.jpg" alt="Divine" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23A52A2A%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22230%22 font-size=%22100%22 text-anchor=%22middle%22%3E✨%3C/text%3E%3C/svg%3E'">
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-icon">✨</div>
+                    <div class="gallery-overlay-text">Divine Grace</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- video section  -->
+<section class="video-section" id="videos">
+  <div class="video-header">
+    <div class="section-number">[ 03 — DIVINE MOMENTS ]</div>
+    <h2 class="video-title">GANGA<br>MAHA AARTI</h2>
+  </div>
+
+  <div class="video-carousel">
+    <!-- Each .video-card holds one vertical video -->
+    <div class="video-card">
+      <video src="videos/VID20231209222357.mp4" muted playsinline></video>
+    </div>
+    <div class="video-card">
+      <video src="videos/VID20231209222431.mp4" muted playsinline></video>
+    </div>
+    <div class="video-card">
+      <video src="videos/VID20240131001401.mp4" muted playsinline></video>
+    </div>
+    <div class="video-card">
+      <video src="videos/VN20250910_113616.mp4" muted playsinline></video>
+    </div>
+    <div class="video-card">
+      <video src="videos/Maha_aarti_ganga_aartii.mp4" muted playsinline></video>
+    </div>
+    <div class="video-card">
+      <video src="videos/VID20231203230907.mp4" muted playsinline></video>
+    </div>
+    <div class="video-card">
+      <video src="videos/VID20231209224013.mp4" muted playsinline></video>
+    </div>
+    <div class="video-card">
+      <video src="videos/VID20240131000005.mp4" muted playsinline></video>
+    </div>
+    <div class="video-card">
+      <video src="videos/VID20240130235918.mp4" muted playsinline></video>
+    </div>
+  </div>
+</section>
+
+
+    
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="testimonials-header">
+            <div class="section-number" style="color: var(--dark);">[ 04 — EXPERIENCES ]</div>
+            <h2 class="testimonials-title">BLESSED<br>VOICES</h2>
+        </div>
+        <div class="testimonials-scroll">
+            <div class="testimonial-card">
+                <div>
+                    <div class="testimonial-icon">🪔</div>
+                    <p class="testimonial-text">
+                        "The Ganga Aarti ceremony at our wedding was absolutely divine. It brought such peace and spiritual energy to our special day. Our guests were mesmerized and talked about it for weeks."
+                    </p>
+                </div>
+                <div>
+                    <div class="testimonial-author">Priya & Rahul Sharma</div>
+                    <div class="testimonial-role">Wedding Ceremony, Mumbai</div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div>
+                    <div class="testimonial-icon">🕉</div>
+                    <p class="testimonial-text">
+                        "Pandit Ji performed the ceremony with such devotion and authenticity. It felt like we were truly blessed by Maa Ganga. The sacred atmosphere was remarkable and unforgettable."
+                    </p>
+                </div>
+                <div>
+                    <div class="testimonial-author">Anita Verma</div>
+                    <div class="testimonial-role">Anniversary, Delhi</div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div>
+                    <div class="testimonial-icon">🙏</div>
+                    <p class="testimonial-text">
+                        "We organized Ganga Aarti for our cultural festival and it was the highlight. The traditional ceremony brought everyone together in pure spirituality and cultural pride."
+                    </p>
+                </div>
+                <div>
+                    <div class="testimonial-author">Cultural Committee</div>
+                    <div class="testimonial-role">Festival, Bangalore</div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div>
+                    <div class="testimonial-icon">🌺</div>
+                    <p class="testimonial-text">
+                        "For our corporate inauguration, this ceremony provided the perfect spiritual beginning. It impressed all stakeholders with its elegance and traditional significance."
+                    </p>
+                </div>
+                <div>
+                    <div class="testimonial-author">Rajesh Patel</div>
+                    <div class="testimonial-role">Corporate Event, Ahmedabad</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-info">
+            <div class="section-number">[ 05 — CONNECT ]</div>
+            <h2 class="contact-title">Let's Create Magic</h2>
+            <div class="contact-item">
+                <div class="contact-label">Vivan Dubey</div>
+                <div class="contact-value"><a href="tel:+919368171293">+91 7999223157</a></div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-label">Email</div>
+                <div class="contact-value"><a href="mailto:gangaaartiwale@gmail.com">gangaaartiwale@gmail.com</a></div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-label">Location</div>
+                <div class="contact-value">Varanasi, India 221005</div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@ganga_aarti_wale" target="_blank" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/ganga_maha_aarti_" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/917999223157?text=Namaste%20%2C%20I%20want%20to%20inquire%20about%20Ganga%20Maha%20Aarti%20ceremonies." class="social-link" target="_blank" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:gangaaartiwale@gmail.com" target="_blank" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+                
+            </div>
+        </div>
+        <div class="contact-form-container">
+            <form class="contact-form" id="inquiryForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" id="name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" id="email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Event Type" id="eventType">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Tell us about your event..." id="message"></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-brand">🕉 Ganga Aarti Wale</div>
+                <p class="footer-tagline">Preserving and sharing the sacred traditions of Varanasi's Ganga Aarti ceremonies worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Weddings</a></li>
+                    <li><a href="#services">Cultural Events</a></li>
+                    <li><a href="#services">Corporate</a></li>
+                    <li><a href="#services">Global</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:+917999223157">+91 79992 23157</a></li>
+                    <li><a href="mailto:gangaaartiwale@gmail.com">Email Us : gangaaartiwale@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Ganga Aarti Wale. All rights reserved.</p>
+            <p>Varanasi, India — Serving Worldwide</p>
+        </div>
+        <div class="footer-bottom-2">
+            <p>Customized by 51 Tech. solutions</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
